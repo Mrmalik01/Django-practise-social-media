@@ -1,1 +1,4 @@
 bookmarks/settings.py
+cert.crt
+cert.key
+db.sqlite3
