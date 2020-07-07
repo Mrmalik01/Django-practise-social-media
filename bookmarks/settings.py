@@ -125,15 +125,25 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# MEDIA SETTINGS
+# ----------------------------------------------------------------------------------------------------------------
+MEDIA_URL = "/media/"
+MEDIA_ROOT = "{}{}".format(BASE_DIR, MEDIA_URL)
+
 # URL SETTINGS
 # ----------------------------------------------------------------------------------------------------------------
-
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
-
 
 # MAIL SETTINGS
 # ----------------------------------------------------------------------------------------------------------------
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# AUTHENTICATION SETTINGS
+# ----------------------------------------------------------------------------------------------------------------
+AUTHENTICATION_BACKEND = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+]
