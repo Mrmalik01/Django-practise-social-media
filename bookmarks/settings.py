@@ -45,7 +45,8 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    'account.apps.AccountConfig'
+    'account.apps.AccountConfig',
+    "image.apps.ImageConfig"
 ]
 
 INSTALLED_APPS = LOCAL_APPS + DJANGO_APPS + THIRD_PARTY_APPS
