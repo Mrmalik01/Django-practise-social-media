@@ -39,13 +39,13 @@
             // Hide the bookmarklet
             jQuery("#bookmarklet").hide();
             // Open new webdite to submit the image
-            window.open(site_url+"images/create/?url'"
+            window.open(site_url+"images/create/?url="
                             + encodeURIComponent(selected_image)
-                            + "%title="
+                            + "&title="
                             + encodeURIComponent(jQuery("title").text()),
                             "_blank");
-            )
-        })
+
+        });
     };
 
     // Check if the jQuery is loaded
